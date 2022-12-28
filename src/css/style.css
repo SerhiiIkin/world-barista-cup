@@ -1,0 +1,12 @@
+@import "main.css";
+@import "header.css";
+@import "footer.css";
+@import "./items/corusel.css";
+@import "./items/burgermenu.css";
+@import "./items/input.css";
+@import "./items/modal.css";
+@import "./items/menu.css";
+@import "./items/pagination.css";
+@import "./items/buttons.css";
+@import "./items/cards.css";
+@import "./items/info.css";

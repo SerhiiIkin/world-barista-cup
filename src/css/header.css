@@ -1,0 +1,119 @@
+.header {
+    background-color: var(--bs-black);
+    height: 200px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.navigation__menu {
+    display: flex;
+}
+
+.navigation__logo {
+    flex: 0 0 60%;
+    align-self: center;
+}
+
+.navigation__logo img {
+    max-width: 100%;
+}
+
+.navigation__input-search {
+    display: none;
+}
+
+.navigation__input-search-label {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+
+@media (min-width: 768px) {
+    .navigation__logo {
+        flex: 0 0 40%;
+    }
+
+    .navigation__menu {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu__items {
+        display: flex;
+        padding: 10px 10px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .menu__dropdown {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        min-height: 100px;
+        max-height: 470px;
+        width: 300px;
+        background-color: var(--black);
+        color: var(--white);
+        z-index: 10;
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        overflow: auto;
+        border: 1px solid var(--lightgray);
+    }
+
+    .menu__dropdown h2 {
+        font-size: 18px;
+    }
+
+    .menu__dropdown p {
+        font-size: 14px;
+    }
+    .menu__dropdown .my-card__description {
+        --max-lines: 2;
+        -webkit-line-clamp: 2;
+    }
+
+    .menu__dropdown .my-card {
+        border-bottom: 1px solid var(--brown);
+        margin-top: 10px;
+    }
+
+    .navigation__input-search-label {
+        display: flex;
+        width: initial;
+        height: initial;
+        margin-right: 10px;
+    }
+
+    .navigation__input-search-label::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: white;
+    }
+    .navigation__input-search-label::before {
+        width: 16px;
+    }
+
+
+    .navigation__input-search {
+        display: flex;
+        max-width: 180px;
+    }
+}
+
+.open-dropdown {
+    display: flex;
+}
+.open-dropdown::-webkit-scrollbar {
+    display: none;
+}

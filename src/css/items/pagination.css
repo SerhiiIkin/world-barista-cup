@@ -1,0 +1,13 @@
+.my-pagination {
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--lightgray);
+    padding: 20px 0 30px;
+    align-items: center;
+}
+
+.my-pagination p {
+    margin: 0;
+}

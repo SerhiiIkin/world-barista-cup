@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Brown rabbit test</title>
+
+        <!-- CSS only -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous"
+        />
+
+        <script
+            defer
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            defer
+            type="module"
+            src="js/scripts.js"
+            type="text/javascript"
+        ></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="container py-4">
+                    <nav class="navigation">
+                        <div class="navigation__logo">
+                            <img
+                                src="./assets/logo-white.png"
+                                alt="world barista cup"
+                            />
+                        </div>
+                        <div class="navigation__menu">
+                            <div class="menu__items">
+                                <label
+                                    class="navigation__input-search-label input-search-label"
+                                    for="nav-input-search"
+                                >
+                                    <input
+                                        class="navigation__input-search input-search"
+                                        type="search"
+                                        id="nav-input-search"
+                                        placeholder="search"
+                                    />
+
+                                    <button class="navigation__btn btn__clear">
+                                        X
+                                    </button>
+                                </label>
+                                <ul class="social-icons social-icons--navbar">
+                                    <a href="#" target="_blank">
+                                        <img
+                                            src="./assets/icons/linkedin-white.svg"
+                                            alt="in"
+                                        />
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <img
+                                            src="./assets/icons/twitter-white.svg"
+                                            alt="twitter"
+                                        />
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <img
+                                            src="./assets/icons/instagram-white.svg"
+                                            alt="instagram"
+                                        />
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <img
+                                            src="./assets/icons/facebook-white.svg"
+                                            alt="facebook"
+                                        />
+                                    </a>
+                                </ul>
+                                <div class="menu__dropdown"></div>
+                            </div>
+
+                            <button class="btn-burger-menu"></button>
+                            <ul class="menu-links">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Nordic roaster</a></li>
+                                <li><a href="#">Result</a></li>
+                                <li><a href="#">Links</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="my-modal modal-search">
+                            <label
+                                class="input-search-label modal-search__label"
+                                for="input-search"
+                            >
+                                <input
+                                    class="my-modal__input-search input-search"
+                                    type="search"
+                                    placeholder="search"
+                                    aria-label="search"
+                                    id="input-search"
+                                />
+
+                                <button class="modal-search__btn btn__clear">
+                                    X
+                                </button>
+                            </label>
+                        </div>
+                        <div class="my-modal modal-menu">
+                            <ul class="modal-links">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Nordic roaster</a></li>
+                                <li><a href="#">Result</a></li>
+                                <li><a href="#">Links</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="modal__social-icons">
+                                <a href="#" target="_blank">
+                                    <img
+                                        src="./assets/icons/linkedin-white.svg"
+                                        alt="in"
+                                    />
+                                </a>
+                                <a href="#" target="_blank">
+                                    <img
+                                        src="./assets/icons/twitter-white.svg"
+                                        alt="in"
+                                    />
+                                </a>
+                                <a href="#" target="_blank">
+                                    <img
+                                        src="./assets/icons/instagram-white.svg"
+                                        alt="in"
+                                    />
+                                </a>
+                                <a href="#" target="_blank">
+                                    <img
+                                        src="./assets/icons/facebook-white.svg"
+                                        alt="in"
+                                    />
+                                </a>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <main class="main">
+                <div class="container">
+                    <section
+                        id="carouselExampleControls"
+                        class="carousel slide"
+                        data-interval="0"
+                    >
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img
+                                    class="w-100"
+                                    src="./assets/images//posts/Post thumbnail-1.png"
+                                    alt="First slide"
+                                />
+                                <div class="carousel-caption bg-black">
+                                    <h3>
+                                        <q class="cutoff-text cutoff-text--3"
+                                            >To create an environment in which
+                                            knowledge about coffee an its sphere
+                                            can be</q
+                                        >
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img
+                                    class="w-100"
+                                    src="./assets/images//posts/Post thumbnail-2.png"
+                                    alt="Second slide"
+                                />
+                                <div class="carousel-caption bg-black">
+                                    <h3>
+                                        <q class="cutoff-text cutoff-text--3"
+                                            >Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Nostrum ab, repellendus vel
+                                            repudiandae quo, iste expedita
+                                            dolores corrupti reprehenderit rem
+                                            at dolorem quia porro placeat, sint
+                                            hic quisquam magnam aspernatur?</q
+                                        >
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img
+                                    class="w-100"
+                                    src="./assets/images//posts/Post thumbnail-3.png"
+                                    alt="Third slide"
+                                />
+                                <div class="carousel-caption bg-black">
+                                    <h3>
+                                        <q class="cutoff-text cutoff-text--3"
+                                            >Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Consequuntur incidunt porro
+                                            praesentium? Distinctio quam
+                                            recusandae molestias ab cupiditate
+                                            aspernatur eos labore neque,
+                                            voluptas delectus aperiam, velit
+                                            consectetur nobis iusto enim!</q
+                                        >
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <a
+                            class="carousel-control-prev"
+                            href="#carouselExampleControls"
+                            role="button"
+                            data-slide="prev"
+                        >
+                            <span
+                                class="carousel-control-prev-icon"
+                                aria-hidden="true"
+                            ></span>
+                        </a>
+                        <a
+                            class="carousel-control-next"
+                            href="#carouselExampleControls"
+                            role="button"
+                            data-slide="next"
+                        >
+                            <span
+                                class="carousel-control-next-icon"
+                                aria-hidden="true"
+                            ></span>
+                        </a>
+                    </section>
+                    <section class="main-content">
+                        <article class="cards">
+                            <div class="my-pagination">
+                                <button
+                                    class="btn btn-black-border btn-prev disabled"
+                                >
+                                    Previous
+                                </button>
+                                <p class="page"></p>
+                                <button class="btn btn-black-border btn-next">
+                                    Next
+                                </button>
+                            </div>
+                        </article>
+                        <article class="info">
+                            <div class="info-card info-card--shop-wbc">
+                                <h2>WBC Shop</h2>
+                                <p>Your shopping car is empty</p>
+                                <a href="#" class="btn btn-black-border"
+                                    >Visit the shop</a
+                                >
+                            </div>
+                            <div class="info-card">
+                                <h2>Next Event</h2>
+                                <h3>World Barista Cup 2021</h3>
+                                <h4>Copenhagen, Denmark</h4>
+                                <h4>Dates: 25th - 27th August 2021</h4>
+                                <h4>
+                                    Theme: <span class="upper">sensory</span>
+                                </h4>
+                                <button class="btn btn-black-border">
+                                    Sign up now
+                                </button>
+                            </div>
+                            <div class="info-card info-card--scoreboard">
+                                <h2>Scoreboard</h2>
+                                <h3>List of winners from last year</h3>
+                                <ul>
+                                    <li>2021 - ?</li>
+                                    <li>2020 - Denmark</li>
+                                    <li>2021 - Sweden</li>
+                                    <li>2020 - Turkey</li>
+                                    <li>2020 - Denmark</li>
+                                    <li>2021 - Sweden</li>
+                                    <li>2020 - Turkey</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="sponsors">
+                        <h2>World Barista Cup Sponsors</h2>
+                        <div class="sponsors__logos"></div>
+                    </section>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="footer__content container">
+                    <div class="footer__head">
+                        <img
+                            class="footer__logo"
+                            src="./assets/logo-white.png"
+                            alt="logo site"
+                        />
+                        <ul class="social-icons social-icons--footer">
+                            <a href="#">
+                                <img
+                                    src="./assets/icons/linkedin-white.svg"
+                                    alt="linkedin"
+                                />
+                            </a>
+                            <a href="#">
+                                <img
+                                    src="./assets/icons/twitter-white.svg"
+                                    alt="twitter"
+                                />
+                            </a>
+                            <a href="#">
+                                <img
+                                    src="./assets/icons/instagram-white.svg"
+                                    alt="instagram"
+                                />
+                            </a>
+                            <a href="#">
+                                <img
+                                    src="./assets/icons/facebook-white.svg"
+                                    alt="facebook"
+                                />
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="footer__about">
+                        <h2>About World Barista Cup</h2>
+                        <h4>The vision within</h4>
+                        <h4>The World Barista Cup</h4>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Illum magnam velit optio alias quasi sed, sit
+                            ea inventore porro quod autem quas non magni at nisi
+                            dolores, ab est. Quod.
+                        </p>
+                    </div>
+                    <div class="footer__instagram">
+                        <h2>Instagram feed</h2>
+                        <div class="footer__fotos"></div>
+                    </div>
+                    <div class="footer__contacts">
+                        <h2>Contact</h2>
+                        <h3>World Barista Cup</h3>
+                        <a
+                            href="https://goo.gl/maps/EewQw5ZoTi8knX6D6"
+                            target="_blank"
+                            >Amagertorv 13</a
+                        >
+                        <a
+                            href="https://goo.gl/maps/EewQw5ZoTi8knX6D6"
+                            target="_blank"
+                            >1160 Copenhagen K</a
+                        >
+                        <a href="tel:+4533120428" target="_blank"
+                            >+4533120428</a
+                        >
+                        <p><span class="upper">cvr: </span>11427693</p>
+                        <a
+                            href="mailto:info@worldbaristacup.com"
+                            target="_blank"
+                            >info@worldbaristacup.com</a
+                        >
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+    <script class="mycard" type="text/template">
+        <div class="my-card">
+            <div class="my-card__content" data-id="{{id}}">
+                <img class="my-card__img" src="{{img}}" alt="{{title}}" />
+                <h2 class="my-card__title">{{title}}</h2>
+                <p class="my-card__dato">Published {{dato}}</p>
+                <p class="cutoff-text cutoff-text--7 my-card__description">{{description}}</p>
+                <button class="btn btn-black-border my-card__btn">Read more</button>
+                <button class="my-card__btn-close">X</button>
+            </div>
+        </div>
+    </script>
+    <script class="my-active-card" type="text/template">
+        <div class="my-card active-card">
+            <div class="my-card__content" data-id="{{id}}">
+                <img class="my-card__img" src="{{img}}" alt="{{title}}" />
+                <h2 class="my-card__title">{{title}}</h2>
+                <p class="my-card__dato">Published {{dato}}</p>
+                <p class="cutoff-text my-card__description">{{description}}</p>
+                <button class="my-card__btn-close show-btn">X</button>
+            </div>
+        </div>
+    </script>
+    <script class="mypagination" type="text/template">
+        Page {{currentPage}} of {{lastPage}}
+    </script>
+    <template class="image-template">
+        <img src="{{logo}}" alt="{{textAlt}}" />
+    </template>
+    <template class="not-founded">
+        <h2>Not founded!</h2>
+    </template>
+</html>

@@ -1,0 +1,118 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.my-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.my-card__btn-close {
+    position: absolute;
+    top: 0;
+    right: -24px;
+    width: 48px;
+    height: 48px;
+    color: var(--white);
+    background-color: var(--black);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+}
+
+.my-card__btn {
+    align-self: flex-start;
+}
+
+.active-card {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--white);
+    color: var(--black);
+    overflow: auto;
+}
+
+.active-card h2,
+.active-card p,
+.active-card button {
+    margin: 0 20px;
+}
+
+.active-card p {
+    padding-bottom: 20px;
+}
+
+.hide-btn {
+    display: none;
+}
+
+.show-btn {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .my-card__content {
+        display: grid;
+        column-gap: 30px;
+        row-gap: 5px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .my-card__img {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: -1;
+    }
+
+    .my-card__title,
+    .my-card__dato,
+    .my-card__description,
+    .my-card__btn {
+        grid-column-start: 2;
+    }
+
+    .my-card__btn {
+        justify-self: flex-start;
+    }
+
+    .active-card {
+        background-color: var(--bg-lightgray);
+        overflow: auto;
+        backdrop-filter: blur(10px);
+    }
+
+    .active-card div {
+        position: relative;
+        max-width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 40px auto;
+        background-color: var(--white);
+        padding-bottom: 40px;
+    }
+
+    .active-card .my-card__btn-close {
+        right: -48px;
+        margin: 0;
+    }
+
+    .active-card img {
+        aspect-ratio: 8/2;
+        object-fit: cover;
+    }
+
+    .active-card-dropdown {
+        color: var(--black);
+    }
+}

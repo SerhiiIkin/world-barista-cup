@@ -1,0 +1,46 @@
+.menu-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .menu-links {
+        display: flex;
+        gap: 6px;
+    }
+
+    .menu-links a {
+        color: white;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .menu-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        background: white;
+        width: 0;
+        height: 2px;
+        transition: width 0.4s ease;
+    }
+
+    .menu__social-icons {
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-links {
+        gap: 16px;
+    }
+
+    .menu-links a:hover::after {
+        transition: width 0.4s ease;
+        width: 100%;
+    }
+
+    .menu-links a:hover {
+        color: white;
+    }
+}

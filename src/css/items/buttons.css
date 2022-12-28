@@ -1,0 +1,11 @@
+.btn-black-border {
+    border: 1px solid var(--black);
+    border-radius: 0px;
+}
+
+@media (min-width: 1200px) {
+    .btn-black-border:hover {
+        background-color: var(--black);
+        color: var(--white);
+    }
+}

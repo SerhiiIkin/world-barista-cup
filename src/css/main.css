@@ -1,0 +1,129 @@
+* {
+    font-family: "Times New Roman";
+}
+
+:root {
+    --lightgray: #dddd;
+    --brown: #707070;
+    --white: #ffffff;
+    --black: #000000;
+    --bg-lightgray: rgb(221 221 221 0.6);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: var(--white) !important;
+    -webkit-box-shadow: 0 0 0 30px var(--black) inset !important;
+}
+
+.overflowH {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+    position: relative;
+    top: -100px;
+}
+
+.cutoff-text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+.cutoff-text--3 {
+    --max-lines: 3;
+    -webkit-line-clamp: 3;
+}
+
+.cutoff-text--7 {
+    --max-lines: 7;
+    -webkit-line-clamp: 7;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.sponsors {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sponsors__logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sponsors img {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    width: 100px;
+}
+
+.social-icons {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-icons--navbar {
+    display: none;
+}
+
+.social-icons--footer {
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .cutoff-text--7 {
+        --max-lines: 5;
+        -webkit-line-clamp: 5;
+    }
+
+    .social-icons--navbar {
+        display: flex;
+    }
+
+    .social-icons--footer {
+        padding: 0;
+    }
+    .main {
+        top: -50px;
+    }
+}
+
+@media (min-width: 991px) {
+    .main-content {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 60% 30%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--lightgray);
+    }
+}
+
+@media (min-width: 1200px) {
+    .cutoff-text--3 {
+        --max-lines: 2;
+        -webkit-line-clamp: 2;
+    }
+}
